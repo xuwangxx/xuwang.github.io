@@ -56,3 +56,18 @@ input:focus{
   text-align: right;
   cursor: pointer;
 }
+.toast{
+  background: rgba(0, 0, 0, 0.8);
+  color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 180px;
+  padding: 0 20px;
+  height: 40px;
+  border-radius: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
