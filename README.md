@@ -1,68 +1,41 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## `yarn`
 
-## Available Scripts
-
-In the project directory, you can run:
+下载依赖
 
 ### `yarn start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+运行开发环境<br />
+打开 [http://localhost:3000](http://localhost:3000) 在浏览器中查看。
 
 ### `yarn test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+在交互式监视模式下启动测试运行程序。<br />
 
 ### `yarn build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+将用于生产的应用程序生成到“build”文件夹。<br />
+它在生产模式下正确地进行反应，并优化构建以获得最佳性能。
+构建被缩小，文件名包含哈希。<br />
+你的应用程序已准备好部署！
 
 ### `yarn eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+如果您对构建工具和配置选项不满意，可以随时`eject`。此命令将从项目中删除单个生成依赖项。
+相反，它会将所有配置文件和可传递的依赖项（Webpack、Babel、ESLint等）直接复制到您的项目中，这样您就可以完全控制它们。除`eject`之外的所有命令都将继续工作，但它们将指向复制的脚本，以便您可以调整它们。现在你只能靠自己了。
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+你不必使用`eject`。curated特性集适合中小型部署，您不应该觉得有义务使用此特性。但是，我们知道，如果您在准备就绪时无法自定义此工具，则此工具将不会有用。
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## `yarn deploy`
 
-## Learn More
+将项目部署在github上
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+```javascript
+    "scripts": {
+        ...
+        "deploy": "gh-pages -d build -b master",
+    },
+```
+`gh-pages -d build -b master`: deploy 在远程仓库创建一个名为gh-pages,并将代码打包成可运行的前端页面项目运行在master上

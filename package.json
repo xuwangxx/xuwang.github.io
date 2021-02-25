@@ -12,7 +12,6 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "predeploy": "react-scripts build",
     "deploy": "gh-pages -d build -b master",
     "build": "react-scripts build",
     "test": "react-scripts test",
