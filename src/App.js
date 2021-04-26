@@ -14,6 +14,10 @@ class index extends React.Component {
     componentWillUnmount(){
         this.clickNum = null
     }
+    componentDidMount() {
+        this.getList()
+        this.getList1()
+    }
     change(event, type){
         this.setState(
             {
@@ -43,6 +47,14 @@ class index extends React.Component {
         this.setState({
             toastTitle: title
         })
+    }
+    getList = () => {
+        this.a = 111
+        console.log(this, 11);
+    }
+    getList1() {
+        this.a = 111
+        console.log(this, 22);
     }
     handleClick () {
         const {name, doing} = this.state.form
