@@ -1,8 +1,7 @@
 import React from 'react';
-import { Route, BrowserRouter, Routes, Navigate } from 'react-router-dom';
+import { Route, BrowserRouter, Routes } from 'react-router-dom';
 import Home from './pages/home';
 import Main from './pages/main';
-import './App.css';
 class index extends React.Component {
     state = {
        
@@ -11,7 +10,7 @@ class index extends React.Component {
         return (
             <BrowserRouter>
                 <Routes>
-                    <Route path='/' element={<Main />}></Route>
+                    <Route path='/' element={<Home />}></Route>
                     <Route path='/home' element={<Home />}></Route>
                 </Routes>
             </BrowserRouter>
