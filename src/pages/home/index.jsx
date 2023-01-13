@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useMemo } from 'react';
+import React, { useState } from 'react';
 import './index.css';
 
 const initList = [
@@ -39,9 +39,7 @@ const Home = () => {
     const [list, setList] = useState(initList);
     const [selImg, setSelImg] = useState('');
 
-    useEffect(() => {
-        window.document.title = '欧神诺产品列表'
-    }, [])
+    window.document.title = '欧神诺产品列表'
 
     const handleClick = () => {
         const newList = initList.filter((row) => row.name.includes(name));
